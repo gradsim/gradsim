@@ -11,7 +11,7 @@
 > This repo is currently a stub. To be notified when code is released, plese ["subscribe" to this issue](https://github.com/gradsim/gradsim/issues/1).
 
 
-## Citing gradslam
+## Citing gradSim
 
 For attribution in academic contexts, please cite this work as
 
