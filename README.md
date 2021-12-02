@@ -283,3 +283,14 @@ BibTeX citation
   pdf     = {https://openreview.net/pdf?id=c_E8kFWfhp0},
 }
 ```
+
+If you find this code useful, please also consider citing Kaolin and DFlex.
+
+```
+@misc{kaolin,
+author = {Clement Fuji-Tsang and Masha Shugrina and Jean-Francois Lafleche and Charles Loop and Towaki Takikawa and Jiehan Wang and Wenzheng Chen and Sanja Fidler and Jason Gorski and Rev Lebaredian and Jianing Li and Michael Li and Krishna Murthy Jatavallabhula and Artem Rozantsev and Frank Shen and Edward Smith and Gavriel State and Tommy Xiang},
+title = {Kaolin: A PyTorch Library for Accelerating 3D Deep Learning Research},
+howpublished = {\url{https://github.com/NVIDIAGameWorks/kaolin}},
+year = {2019}
+}
+```
