@@ -1,0 +1,48 @@
+% \usepackage[usenames,dvipsnames]{pstricks}
+% \usepackage{epsfig}
+% \usepackage{pst-grad} % For gradients
+% \usepackage{pst-plot} % For axes
+% \usepackage[space]{grffile} % For spaces in paths
+% \usepackage{etoolbox} % For spaces in paths
+% \makeatletter % For spaces in paths
+% \patchcmd\Gread@eps{\@inputcheck#1 }{\@inputcheck"#1"\relax}{}{}
+% \makeatother
+% % User Packages:
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+% 
+
+\psscalebox{1.0 1.0} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.0175)(28.875,2.0175)
+\psframe[linecolor=black, linewidth=0.04, dimen=outer](6.4,1.2525)(0.0,0.0525)
+\rput(3.2,0.8525){Scene parameters}
+\rput(3.2,0.4525){(objects, physical attributes, geometries)}
+\psframe[linecolor=black, linewidth=0.04, dimen=outer](13.04,1.0725)(9.84,0.2725)
+\rput(11.42,0.6525){Physics engine}
+\psframe[linecolor=black, linewidth=0.04, dimen=outer](19.02,1.0725)(15.82,0.2725)
+\rput(17.42,0.6725){Rendering engine}
+\psline[linecolor=black, linewidth=0.04, arrowsize=0.05291667cm 2.0,arrowlength=1.0,arrowinset=0.0]{->}(6.42,0.6525)(9.8,0.6525)
+\rput(8.04,0.8925){$\mathbf{s}(0) = \left[\mathbf{q}(0), \mathbf{u}(0)\right]$}
+\rput(8.0,0.2725){$\mathbf{\theta}$}
+\psline[linecolor=black, linewidth=0.04, linestyle=dashed, dash=0.17638889cm 0.10583334cm, arrowsize=0.03cm 2.0,arrowlength=1.4,arrowinset=0.0]{->}(12.4,1.0525)(12.4,1.6325)(10.38,1.6525)(10.4,1.0525)
+\psline[linecolor=black, linewidth=0.04, arrowsize=0.03cm 2.0,arrowlength=1.0,arrowinset=0.0]{->}(13.06,0.6725)(15.82,0.6925)
+\rput(14.5,0.9125){$\mathbf{q}(t)$}
+\rput(10.76,-0.5075){Renderer parameters (cameras, lights, textures, topology)}
+\psline[linecolor=black, linewidth=0.04, arrowsize=0.03cm 2.0,arrowlength=1.0,arrowinset=0.0]{->}(2.8,0.0525)(2.8,-0.7475)(17.2,-0.7475)(17.2,0.2325)
+\rput(11.34,1.8925){$t \gets t + 1$}
+\psframe[linecolor=black, linewidth=0.04, dimen=outer](23.52,1.7325)(21.12,0.1325)
+\psframe[linecolor=black, linewidth=0.04, dimen=outer](23.72,1.5325)(21.32,-0.0675)
+\psframe[linecolor=black, linewidth=0.04, dimen=outer](23.92,1.3325)(21.52,-0.2675)
+\psframe[linecolor=black, linewidth=0.04, dimen=outer](27.98,1.7325)(25.58,0.1325)
+\psframe[linecolor=black, linewidth=0.04, dimen=outer](28.18,1.5325)(25.78,-0.0675)
+\psframe[linecolor=black, linewidth=0.04, dimen=outer](28.38,1.3325)(25.98,-0.2675)
+\psline[linecolor=black, linewidth=0.04, arrowsize=0.03cm 2.0,arrowlength=1.0,arrowinset=0.0]{->}(19.04,0.6925)(19.98,0.6925)
+\psframe[linecolor=black, linewidth=0.04, linestyle=dashed, dash=0.17638889cm 0.10583334cm, dimen=outer](28.82,1.9325)(20.04,-1.1475)
+\rput(24.9,-1.4675){Pixelwise mean-squared error (MSE)}
+\rput(24.7,-1.8275){$\|\mathcal{I}_{pred} - \mathcal{I}_{gt} \|_2^2$}
+\rput(22.58,-0.6675){Predicted video sequence $\mathcal{I}_{pred}$}
+\rput(27.06,-0.6675){True video sequence $\mathcal{I}_{gt}$}
+\end{pspicture}
+}
+
