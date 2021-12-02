@@ -220,7 +220,7 @@ python demo_cloth.py
 A visuomotor control demo that trains a neural network to actuate the tetrahedrons of a `gear` mesh, in order for it to achieve a specified target pose.
 
 ```bash
-python control_fem_gear.py
+python control_fem.py
 ```
 
 #### control_cloth.py
