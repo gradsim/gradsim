@@ -125,13 +125,13 @@ python hellogradsim.py
 
 This will save a rendered `gif` at `examples/cache/hellogradsim.gif`. The quality of this gif might be a tad poor if using the `cube.obj` model (from `examples/sampledata/cube.obj`) as it has just 12 triangles.
 
-#### demoforces.py
+#### demo_forces.py
 
 This examples demonstrates how to apply forces at arbitrary chosen points on a rigid body, as opposed to only the center of mass (such forces generate rotations, etc. which are of interest).
 
 ```bash
 cd examples
-python demoforces.py
+python demo_forces.py
 ```
 
 #### demo_mass_known_shape.py
