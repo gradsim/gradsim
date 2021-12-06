@@ -201,7 +201,7 @@ python hellodflex.py
 
 #### demo_fem.py
 
-Optimizes the parameters of an FEM model (uses the NeoHookean hyperelasticity model). In particular, the demo shows how to optimize for the mass of each particle in the deformable mesh to math a rendered video sequence.
+Optimizes the parameters of an FEM model (uses the NeoHookean hyperelasticity model). In particular, the demo shows how to optimize for the mass of each particle in the deformable mesh to match a rendered video sequence.
 
 ```bash
 python demo_fem.py
