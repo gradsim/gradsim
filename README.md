@@ -125,13 +125,13 @@ python hellogradsim.py
 
 This will save a rendered `gif` at `examples/cache/hellogradsim.gif`. The quality of this gif might be a tad poor if using the `cube.obj` model (from `examples/sampledata/cube.obj`) as it has just 12 triangles.
 
-#### demoforces.py
+#### demo_forces.py
 
 This examples demonstrates how to apply forces at arbitrary chosen points on a rigid body, as opposed to only the center of mass (such forces generate rotations, etc. which are of interest).
 
 ```bash
 cd examples
-python demoforces.py
+python demo_forces.py
 ```
 
 #### demo_mass_known_shape.py
@@ -201,7 +201,7 @@ python hellodflex.py
 
 #### demo_fem.py
 
-Optimizes the parameters of an FEM model (uses the NeoHookean hyperelasticity model). In particular, the demo shows how to optimize for the mass of each particle in the deformable mesh to math a rendered video sequence.
+Optimizes the parameters of an FEM model (uses the NeoHookean hyperelasticity model). In particular, the demo shows how to optimize for the mass of each particle in the deformable mesh to match a rendered video sequence.
 
 ```bash
 python demo_fem.py
@@ -220,7 +220,7 @@ python demo_cloth.py
 A visuomotor control demo that trains a neural network to actuate the tetrahedrons of a `gear` mesh, in order for it to achieve a specified target pose.
 
 ```bash
-python control_fem_gear.py
+python control_fem.py
 ```
 
 #### control_cloth.py
