@@ -1010,11 +1010,11 @@ class Adjoint:
                 target = adj.eval(node.value)
 
                 indices = []
-                if isinstance(node.slice.value, ast.Num):
-                    var = adj.eval(node.slice.value)
+                if isinstance(node.slice, ast.Num):
+                    var = adj.eval(node.slice)
                     indices.append(var)
                 else:
-                    for arg in node.slice.value.elts:
+                    for arg in node.slice.elts:
                         var = adj.eval(arg)
                         indices.append(var)
 

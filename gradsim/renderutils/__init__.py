@@ -14,4 +14,4 @@
 
 from . import lighting
 from .softrenderer import SoftRenderer
-# from .trianglemesh import TriangleMesh
+from .trianglemesh import TriangleMesh
