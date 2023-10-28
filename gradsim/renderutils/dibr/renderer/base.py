@@ -58,10 +58,16 @@ class Renderer(nn.Module):
         self.renderer = renderers[mode](height, width)
         if camera_center is None:
             self.camera_center = np.array([0, 0, 0], dtype=np.float32)
+        else:
+            self.camera_center = camera_center
         if camera_up is None:
             self.camera_up = np.array([0, 1, 0], dtype=np.float32)
+        else:
+            self.camera_up = camera_up
         if camera_fov_y is None:
             self.camera_fov_y = 49.13434207744484 * np.pi / 180.0
+        else:
+            self.camera_fov_y = camera_fov_y
         self.camera_params = None
 
     def forward(self, points, *args, **kwargs):
