@@ -27,14 +27,8 @@ if __name__ == "__main__":
     mesh = TriangleMesh.from_obj(Path("sampledata/banana.obj"))
     vertices = meshutils.normalize_vertices(mesh.vertices.unsqueeze(0)).to(device)
     faces = mesh.faces.to(device).unsqueeze(0)
-    textures = torch.cat(
-        (
-            torch.ones(1, faces.shape[1], 2, 1, dtype=torch.float32, device=device),
-            torch.ones(1, faces.shape[1], 2, 1, dtype=torch.float32, device=device),
-            torch.zeros(1, faces.shape[1], 2, 1, dtype=torch.float32, device=device),
-        ),
-        dim=-1,
-    )
+    textures = torch.ones(1, faces.shape[1], 2, 3, device=device)
+
     body = RigidBody(vertices[0])
 
     # Create a force that applies gravity (g = 10 metres / second^2).
@@ -48,17 +42,20 @@ if __name__ == "__main__":
     sim = Simulator([body])
 
     # Initialize the renderer.
-    renderer = SoftRenderer(camera_mode="look_at", device=device)
+    renderer = SoftRenderer(
+        image_size=512,
+        camera_mode="look_at", device=device)
     camera_distance = 8.0
     elevation = 30.0
-    azimuth = 0.0
-    renderer.set_eye_from_angles(camera_distance, elevation, azimuth)
 
     # Run the simulation.
     writer = imageio.get_writer(outfile, mode="I")
-    for i in trange(20):
-        sim.step()
+    num_steps = 20
+    for i in trange(num_steps):
+        # sim.step()
         # print("Body is at:", body.position)
+        azimuth = 360 * i / num_steps
+        renderer.set_eye_from_angles(camera_distance, elevation, azimuth)
         rgba = renderer.forward(body.get_world_vertices().unsqueeze(0), faces, textures)
         img = rgba[0].permute(1, 2, 0).detach().cpu().numpy()
         #     # import matplotlib.pyplot as plt

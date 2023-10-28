@@ -147,7 +147,7 @@ def get_requirements():
         "pytest>=4.6",
         "pytest-cov>=2.7",
         "pyyaml",
-        "sphinx==2.2.0",  # pinned to resolve issue with docutils 0.16b0.dev
+        "sphinx==5.0",  # pinned to resolve issue with docutils 0.16b0.dev # Changed to 5.0 from 2.2.0
         "torchdiffeq",
         "tqdm",
     ]
